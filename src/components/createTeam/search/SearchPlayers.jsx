@@ -6,7 +6,7 @@ import ShowPlayers from '../../../handlers/showPlayers/ShowPlayers';
 
 function SearchPlayers ( {player} ) {
     const API_KEY = '4fe77203ed7cebd9465165f180509282ca89a77f9b7d96c4b7b4abf878791181'
-    const [info, setInfo] = useState(null)
+    const [info, setInfo] = useState([])
     const [renderInfo, setRenderInfo] = useState(false)
     const [query, setQuery] = useState(false)
     // const [player, setPlayer] = useState('haland')
@@ -23,15 +23,16 @@ function SearchPlayers ( {player} ) {
             .then(res => {
                 setInfo(res.data)
                 console.log(res.data)
+                // setRenderInfo(true)
             })
             .catch(err => {
                 console.log(err)
             })
     }
 
-    useEffect(() => {
-        getInfo()
-    }, [])
+    // useEffect(() => {
+    //     getInfo()
+    // }, [])
 
     // console.log('Player: ' + player)
     console.log('InputValue: ' + inputValue)
@@ -43,7 +44,7 @@ function SearchPlayers ( {player} ) {
                 <button className="btn btn-warning" onClick={() => getInfo(inputValue)}>Pelota</button>
             </div>
 
-            {/* {query &&
+            {inputValue != [] &&
                 <div>
                     {info.map((e) => (
                         <div key={e.player_id}>
@@ -56,7 +57,7 @@ function SearchPlayers ( {player} ) {
                         </div>
                     ))}
                 </div>
-            } */}
+            }
         </>
   )
 }
