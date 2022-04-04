@@ -8,8 +8,8 @@ function Search() {
         <>
             <h1>Search Component</h1>
             <div>
-                {/* <SearchPlayers player={'Haland'} /> */}
-                <SearchPlayers />
+                <SearchPlayers player='Ronaldo' />
+                {/* <SearchPlayers /> */}
                 {/* <SearchClubs /> */}
             </div>
         </>

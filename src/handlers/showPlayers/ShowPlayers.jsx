@@ -1,4 +1,4 @@
-
+import SearchPlayers from "../../components/createTeam/search/SearchPlayers"
 
 function ShowPlayers() {
   return (
