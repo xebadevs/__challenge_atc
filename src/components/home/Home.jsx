@@ -9,7 +9,7 @@ function Home() {
     <>
         <Navbar />
         <h1>Home Component</h1>
-        <button onClick={() => navigate('/createTeam1')}>¡A jugar!</button>
+        <button onClick={() => navigate('/equipo1')}>¡A jugar!</button>
         <Footer />
     </>
   )

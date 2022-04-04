@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import CreateTeam from './components/createTeam/CreateTeam'
+import CreateTeam from './components/createTeam/CreateTeam1'
 import Home from "./components/home/Home"
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
          <BrowserRouter>
             <Routes>
                <Route path="/" element={<Home />}></Route>
-               <Route path="/createTeam1" element={<CreateTeam />}></Route>
+               <Route path="/equipo1" element={<CreateTeam />}></Route>
             </Routes>
          </BrowserRouter>
     )

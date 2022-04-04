@@ -1,12 +1,17 @@
+import { useState } from "react"
 
 
 function SearchClubs() {
+    const [clubs, setClubs] = useState([])
     return (
         <>
-            <input className="form-control" type="search" placeholder="Buscar club..." aria-label="Search" />
-            <br />
-            <button className="btn btn-warning" type="submit">Pelota</button>
-         </>
+            <form>
+                <input className="form-control mt-3" type="search" placeholder="Buscar club..." aria-label="Search" />
+                <button className="btn btn-warning" type="submit">Pelota</button>
+            </form>
+
+            <p>Todo el despliegue de las cards con clubs</p>
+        </>
   )
 }
 
