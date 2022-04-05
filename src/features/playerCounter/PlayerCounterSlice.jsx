@@ -8,10 +8,13 @@ export const PlayerCounterSlice = createSlice({
     reducers: {
         increment: (state) => {
             state.value += 1
-        }
+        },
+        turnToZero: (state) => {
+            state.value = 0
+        },
     }
 })
 
-export const { increment } = PlayerCounterSlice.actions
+export const { increment, turnToZero } = PlayerCounterSlice.actions
 
 export default PlayerCounterSlice.reducer

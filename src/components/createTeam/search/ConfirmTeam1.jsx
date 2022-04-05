@@ -1,19 +1,15 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { turnToZero } from '../../features/playerCounter/PlayerCounterSlice'
 
 
 function ConfirmTeam1() {
 
   const [team1Name, setTeam1Name] = useState(null)
   const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const createName1 = (e) => {
       e.preventDefault()
       e.nativeEvent.stopImmediatePropagation()
-      dispatch(turnToZero())
       localStorage.setItem('Team1Name', JSON.stringify(team1Name))
       navigate('/equipo2')
   }

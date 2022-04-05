@@ -11,12 +11,14 @@ function SearchPlayers () {
     const [inputValue, setInputValue] = useState([])
     const [renderInfo, setRenderInfo] = useState(false)
     const [noResponse, setNoResponse] = useState(false)
-    const [team1, setTeam1] = useState([])    
+    const [team2, setTeam2] = useState([])    
     const navigate = useNavigate()
 
 
     const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
+    const team1Players = localStorage.getItem('Team1')
+    const team1PlayersJSON = JSON.parse(team1Players)
 
     const getInfo = async (param) => {
         let options = {
@@ -41,21 +43,21 @@ function SearchPlayers () {
     }
     
     const countAndSet = (id) => {
-        if(team1.includes(id)){
+        if(team2.includes(id) || (team2.includes(team1PlayersJSON))){
             alert('REPETIDO')
         }else{
             if(count < 6){
             dispatch(increment(id))
-            setTeam1([...team1, id])
-            console.log(team1)
+            setTeam2([...team2, id])
+            console.log(team2)
             console.log('Contador: ' + count)
             }
         }
     }
         
     const continuar = () => {
-        localStorage.setItem('Team1', JSON.stringify(team1))
-        navigate('/confirmar-equipo1')
+        localStorage.setItem('Team2', JSON.stringify(team2))
+        navigate('/confirmar-equipo2')
     }
 
 return (
@@ -81,7 +83,7 @@ return (
                     </div>
                 ))}
                 <p>{count}</p>
-                <p>{team1 + ' '}</p>
+                <p>{team2 + ' '}</p>
             </div>
         }
 
