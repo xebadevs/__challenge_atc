@@ -1,7 +1,7 @@
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
 import TopMessage from "./TopMessage"
-import Search from "./search/Search"
+import SearchPlayers from "./search/SearchPlayers"
 
 function CreateTeam() {
     let teamNumber = 1
@@ -11,7 +11,7 @@ function CreateTeam() {
             <h1>CreateTeam Component</h1>
             <Navbar />
             <TopMessage num={teamNumber} />
-            <Search />
+            <SearchPlayers />
             <Footer />
         </>
     )

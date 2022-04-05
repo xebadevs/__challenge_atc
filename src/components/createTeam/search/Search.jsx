@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import SearchClubs from './SearchClubs'
 import SearchPlayers from './SearchPlayers'
 
 function Search() {
