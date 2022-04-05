@@ -11,7 +11,8 @@ function SearchPlayers () {
     const [inputValue, setInputValue] = useState([])
     const [renderInfo, setRenderInfo] = useState(false)
     const [noResponse, setNoResponse] = useState(false)
-    const [team2, setTeam2] = useState([])    
+    const [team2, setTeam2] = useState([])
+    const [playerPhotos, setPlayerPhotos] = useState([])
     const navigate = useNavigate()
 
 
@@ -38,25 +39,25 @@ function SearchPlayers () {
                 }
             })
             .catch(err => {
-                console.log('Error: ' + err)
+                console.log(err)
             })
     }
     
-    const countAndSet = (id) => {
-        if(team2.includes(id) || (team2.includes(team1PlayersJSON))){
+    const countAndSet = (id, img) => {
+        if(team2.includes(id) || (team1PlayersJSON.includes(id))){
             alert('REPETIDO')
         }else{
             if(count < 6){
             dispatch(increment(id))
             setTeam2([...team2, id])
-            console.log(team2)
-            console.log('Contador: ' + count)
+            setPlayerPhotos([...playerPhotos, img])
             }
         }
     }
         
     const continuar = () => {
         localStorage.setItem('Team2', JSON.stringify(team2))
+        localStorage.setItem('Team2Photos', JSON.stringify(playerPhotos))
         navigate('/confirmar-equipo2')
     }
 
@@ -78,7 +79,7 @@ return (
                         <p>{e.team_name}</p>
                         <p>{e.player_id}</p>
                         <p hidden>{e.player_type}</p>
-                        <button onClick={() => countAndSet(e.player_id)}>Seleccionar</button>
+                        <button onClick={() => countAndSet(e.player_id, e.player_image)}>Seleccionar</button>
                         <hr />
                     </div>
                 ))}
