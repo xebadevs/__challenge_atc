@@ -1,0 +1,13 @@
+.footer {
+    width: 100%;
+}
+
+.footer img {
+    width: 100%;
+}
+
+@media screen and (max-width: 810px) and (orientation: portrait){
+    .d-flex {
+        margin-bottom: 10px;
+    }
+}

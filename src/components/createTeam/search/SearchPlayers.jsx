@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux'
 import { increment } from '../../../features/playerCounter/PlayerCounterSlice';
 import noPhoto from '../../../assets/img/nn_photo.png'
+import balloon from '../../../assets/img/ico_ball.png'
 
 function SearchPlayers () {
     const API_KEY = '4fe77203ed7cebd9465165f180509282ca89a77f9b7d96c4b7b4abf878791181'
@@ -61,10 +62,12 @@ function SearchPlayers () {
 
 return (
     <>
-        <div>
+        <div className='search-control mt-4'>
             <input className="form-control" type="search" placeholder="Buscar jugador..." aria-label="Search" onChange={e => setInputValue(e.target.value)} />
             {inputValue !== [] &&
-                <button className="btn btn-warning" disabled={false} onClick={() => getInfo(inputValue)}>Pelota</button>
+                <button className="btn btn-warning btn-ballon" disabled={false} onClick={() => getInfo(inputValue)}>
+                    <img src={balloon} alt="ícono pelota" className='balloon-ico' />
+                </button>
             }
         </div>
 

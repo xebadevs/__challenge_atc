@@ -1,0 +1,32 @@
+/* -------------------- MAIN PAGE BUTTONS --------------------  */
+.btn-success {
+    background-color: var(--dark-green);
+    border-radius: 5px;
+    width: 130px;
+    height: 45px;
+    margin: auto;
+    border: transparent;
+    transition: all .8s ease-in-out;
+
+}
+
+.btn-success:focus,
+.btn-success:hover {
+    border: 1px solid white;
+    background-color: var(--dark-green-hover);
+}
+
+/* -------------------- SEARCH PAGE BUTTONS --------------------  */
+.button.btn.btn-warning.btn-balloon {
+    margin: 0;
+    padding: 0px;
+  }
+  
+  .btn-warning {
+    padding: 0px;
+    width: 50px;
+  }
+  
+  .balloon-ico {
+    width: 35px;
+  }

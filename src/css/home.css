@@ -1,0 +1,36 @@
+.main-text {
+    text-align: center;
+  }
+  
+.main-title {
+font-weight: bold;
+}
+
+.home-container {
+display: grid;
+width: 100%;
+}
+
+.soccer-player {
+margin: auto;
+}
+
+.soccer-player img {
+width: 50vh;
+margin: auto;
+}
+
+/* MEDIAQUERIES */
+@media screen and (max-width: 810px) and (orientation: portrait){
+.main-title {
+    font-size: 18px;
+}
+
+.mt-5 h3 {
+    font-size: 16px;
+}
+
+.soccer-player img {
+    width: 40vh;
+}
+}
