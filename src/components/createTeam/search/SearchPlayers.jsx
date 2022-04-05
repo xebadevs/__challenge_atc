@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux'
@@ -63,7 +63,7 @@ return (
     <>
         <div>
             <input className="form-control" type="search" placeholder="Buscar jugador..." aria-label="Search" onChange={e => setInputValue(e.target.value)} />
-            {inputValue != [] &&
+            {inputValue !== [] &&
                 <button className="btn btn-warning" disabled={false} onClick={() => getInfo(inputValue)}>Pelota</button>
             }
         </div>
@@ -72,7 +72,7 @@ return (
             <div>
                 {info.map((e) => (
                     <div key={e.player_id}>
-                        <img src={e.player_image? e.player_image : noPhoto}></img>
+                        <img src={e.player_image? e.player_image : noPhoto} alt={e.player_name}></img>
                         <p>{e.player_name.toUpperCase()}</p>
                         <p>{e.team_name}</p>
                         <p>{e.player_id}</p>
