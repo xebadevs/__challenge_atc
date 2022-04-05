@@ -44,10 +44,12 @@ function SearchPlayers () {
         if(team1.includes(id)){
             alert('REPETIDO')
         }else{
+            if(count < 6){
             dispatch(increment(id))
             setTeam1([...team1, id])
             console.log(team1)
             console.log('Contador: ' + count)
+            }
         }
     }
         
