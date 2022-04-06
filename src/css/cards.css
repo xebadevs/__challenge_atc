@@ -37,32 +37,7 @@
   min-height: 33vh;
 }
 
-.alert {
-    background-color: rgb(110, 8, 8);
-    color: whitesmoke;
-    width: 50vw;
-    height: 70px;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    text-align: center;
-    z-index: 99;
 
-    animation-duration: 3s;
-    animation-name: slidein;
-}
-
-@keyframes slidein {
-from {
-    margin-left: 0%;
-    width: 30%
-}
-
-to {
-    margin-left: 30%;
-    width: -100%;
-}
-}
 
   /* -------------------- MEDIAQUERIES --------------------  */
 @media screen and (max-width: 810px) and (orientation: portrait){

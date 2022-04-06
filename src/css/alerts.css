@@ -1,0 +1,59 @@
+.alert {
+    background-color: rgb(110, 8, 8);
+    color: whitesmoke;
+    width: 50vw;
+    height: 70px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    z-index: 99;
+
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+from {
+    margin-left: 0%;
+    width: 30%
+    }
+
+to {
+    margin-left: 30%;
+    width: -100%;
+    }
+}
+
+.count-alert {
+    display: flex;
+    background-color: #FFC107;
+    color: black;
+    width: 4vw;
+    height: 70px;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    z-index: 99;
+    text-align: center;
+    
+    animation-duration: 1s;
+    animation-name: count-in;
+}
+
+.count-alert h3 {
+    line-height: 60px;
+    margin: auto;
+}
+
+@keyframes countin {
+    from {
+        margin-left: 0%;
+        width: 0%
+        }
+    
+    to {
+        margin-left: 30%;
+        width: 10%;
+        }
+}

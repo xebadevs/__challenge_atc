@@ -55,11 +55,13 @@ function SearchPlayers () {
                 setTeam1([...team1, id])
                 setPlayerPhotos([...playerPhotos, img])
                 setDisplayCounter(true)
+                setTimeout(hideDisplayCounter, 30000)
             }
         }
 
         if(count === 4){
             setRenderInfo(false)
+            setDisplayCounter(false)
         }
     }
         
@@ -75,6 +77,10 @@ function SearchPlayers () {
 
     const hideNoResponse = () => {
         setNoResponse(false)
+    }
+
+    const hideDisplayCounter = () => {
+        setDisplayCounter(false)
     }
 
 return (
@@ -101,7 +107,7 @@ return (
         }
 
         {count === 5 &&
-            <div className='confirm-note mt-5'>
+            <div className='five-ready mt-5'>
                 <h3>¡Ya tienes a</h3>
                 <h3>tus 5 jugadores!</h3>
                 <button className='mt-3' onClick={() => continuar()}>Continuar</button>
@@ -128,8 +134,8 @@ return (
         }
 
         {displayCounter &&
-            <div>
-                <h1>{count}</h1>
+            <div className='count-alert'>
+                <h3>{count}</h3>
             </div>
         }
     </>
