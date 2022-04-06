@@ -25,7 +25,7 @@ function Home() {
         </div>
         <button className='btn-success mt-3 mb-5' onClick={() => navigate('/equipo1')}>¡A jugar!</button>
 
-        // * Si no se habilitó la opción de 'Volver a empezar', se puede acceder directamente al último partido
+        {/* // * Si no se habilitó la opción de 'Volver a empezar', se puede acceder directamente al último partido */}
         {team2 !== null &&
             <button className='btn-success mt-3 mb-5 last-game' onClick={() => navigate('/dream-match')}>Ver mi último partido</button>
         }

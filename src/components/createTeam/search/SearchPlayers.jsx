@@ -105,7 +105,7 @@ return (
             }
         </div>
 
-        // * Jugador repetido
+        {/* // * Jugador repetido */}
         {repeatedPlayer &&
             <div>
                 <div class="alert alert-light" role="alert">
@@ -114,12 +114,12 @@ return (
             </div>
         }
 
-        // * Búsqueda sin respuesta
+        {/* // * Búsqueda sin respuesta */}
         {noResponse &&
             <p className='text-center'>¡Nadie con ese nombre por aquí!</p>
         }
 
-        // * Si ya hay 5 jugadores, se da la opción de limpiar todo o continuar
+        {/* // * Si ya hay 5 jugadores, se da la opción de limpiar todo o continuar */}
         {count >= 5 &&
             <div className='five-ready mt-5'>
                 <h3 className='mt-4'>¡Ya tienes a</h3>
@@ -133,12 +133,12 @@ return (
             </div>
         }
 
-        // * Helper para que el footer no quede a mitad de la vista
+        {/* // * Helper para que el footer no quede a mitad de la vista */}
         {!renderInfo &&
         <div className='footer-helper'></div>
         }
 
-        // * Se muestran todos los resultados
+        {/* // * Se muestran todos los resultados */}
         {renderInfo &&
             <div className='card-container'>
                 {info.map((e) => (
@@ -154,7 +154,7 @@ return (
             </div>
         }
 
-        // * Contador de jugadores
+        {/* // * Contador de jugadores */}
         {displayCounter &&
             <div className='count-alert'>
                 <h3>{count}</h3>
