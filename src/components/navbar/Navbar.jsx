@@ -6,13 +6,13 @@ function Navbar() {
     <>
       <nav class="navbar navbar-light bg-light navbar-container">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src={logo} alt="logo" class="navbar-logo" />
-        </a>
+        <span class="navbar-brand" href="#">
+          <img class="navbar-logo" src={logo} alt="logo" />
+        </span>
         <h1 className="navbar-title">Dream Match</h1>
-        <a class="navbar-brand" href="#">
-          <img src={logox} alt="logo invisible" class="navbar-logo" />
-        </a>
+        <span class="navbar-brand" href="#">
+          <img class="navbar-logo inv" src={logox} alt="logo invisible" />
+        </span>
       </div>
     </nav>
     </>

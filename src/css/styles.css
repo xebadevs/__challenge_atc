@@ -13,6 +13,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--bg-main);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(12,151,80,1) 50%, rgba(0,0,0,1) 100%);;
+  background: linear-gradient(90deg, rgba(0,38,15,1) 0%, rgba(12,151,80,1) 50%, rgba(0,38,15,1) 100%);
   color: whitesmoke;
   font-family: 'Montserrat', sans-serif;
 }
@@ -41,6 +43,10 @@ body {
 .mini-field {
   display: grid;
   justify-content: center;
+}
+
+.black-bcg {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,23,7,1) 50%, rgba(0,0,0,1) 100%);
 }
 
 /* MEDIAQUERIES */

@@ -3,4 +3,7 @@
     --light-green: #009E42;
     --dark-green: #157347;
     --dark-green-hover: #13613d;
+    --shadow-soft: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --shadow-medium: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --shadow-strong: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

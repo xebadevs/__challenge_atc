@@ -26,30 +26,32 @@ function ShowTeams() {
 
     return (
         <>
+            <div className="black-bcg">
             <Navbar />
-            <h3 className='text-center mt-5'> {team1Name} </h3>
-            <div className='confirm-container-both mt-4'>
-                {team1PhotosJSON.map((photo) => (
-                    <img src={photo? photo : noPhoto} alt="" />
-                ))}
-            </div>
-            <div className="mini-field mt-4">
-                <img src={team1field} alt='mini cancha a'></img>
-            </div>
-            <h3 className='text-center mt-4'> VS </h3>
-            <div className="mini-field mt-4">
-                <img src={team2field} alt='mini cancha a'></img>
-            </div>
-            <div className="confirm-container-both mt-4">
-                {team2PhotosJSON.map((photo) => (
-                    <img src={photo? photo : noPhoto} alt="" />
+                <h3 className='text-center mt-5'> {team1Name} </h3>
+                <div className='confirm-container-both mt-4'>
+                    {team1PhotosJSON.map((photo) => (
+                        <img src={photo? photo : noPhoto} alt="" />
                     ))}
+                </div>
+                <div className="mini-field mt-4">
+                    <img src={team1field} alt='mini cancha a'></img>
+                </div>
+                <h3 className='text-center mt-4'> VS </h3>
+                <div className="mini-field mt-4">
+                    <img src={team2field} alt='mini cancha a'></img>
+                </div>
+                <div className="confirm-container-both mt-4">
+                    {team2PhotosJSON.map((photo) => (
+                        <img src={photo? photo : noPhoto} alt="" />
+                        ))}
+                </div>
+                <h3 className='text-center mt-4'> {team2Name} </h3>
+                <div className="dm-confirm-btn">
+                    <button className='btn-success mt-5 mb-5' onClick={() => restart()}>¡Volver a empezar!</button>
+                </div>
+                <Footer />
             </div>
-            <h3 className='text-center mt-4'> {team2Name} </h3>
-            <div className="dm-confirm-btn">
-                <button className='btn-success mt-5 mb-5' onClick={() => restart()}>¡Volver a empezar!</button>
-            </div>
-            <Footer />
         </>
     )
 }

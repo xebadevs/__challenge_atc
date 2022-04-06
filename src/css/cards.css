@@ -10,6 +10,7 @@
     background: url(../assets/img/card_bcg.svg);
     border: 1px solid whitesmoke;
     transition: all .4s ease-in-out;
+    box-shadow: var(--shadow-strong);
 }
 
 .card:hover,
@@ -45,6 +46,7 @@
     background-color: var(--dark-green);
     border-radius: 30px;
     padding: 10px;
+    box-shadow: var(--shadow-medium);
 }
 
 .confirm-container img,
@@ -52,6 +54,7 @@
     margin: auto;
     border: 3px solid gray;
     border-radius: 50%;
+    box-shadow: var(--shadow-medium);
 }
 
 .confirm-container-both {

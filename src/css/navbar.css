@@ -1,17 +1,26 @@
 .navbar-container {
     padding: 5px 0;
     height: 7vh;
-  }
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+}
   
-  .navbar-button {
-    border: none;
-    background-color: none;
+.navbar-button {
+  border: none;
+  background-color: none;
+}
+
+.navbar-logo {
+  width: 45px;
+  padding-bottom: 0%;
   }
-  
-  .navbar-logo {
-    width: 45px;
-    padding-bottom: 0%;
-    }
+
+.navbar-logo inv {
+  display: none;
+}
+
+.navbar img {
+  border-radius: 50%;
+}
   
   .navbar-title {
     color: var(--bg-main);

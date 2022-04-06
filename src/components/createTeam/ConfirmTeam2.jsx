@@ -46,7 +46,7 @@ return (
         <form className='team1-confirm mt-5' onSubmit={createName2}>
             <label className='mt-4'>¿Cómo quieras llamar a tu equipo?</label>
             <br />
-            <input type="text" maxLength="25" required onChange={e => setTeam2Name(e.target.value)}></input>
+            <input className='text-center' type="text" maxLength="25" required onChange={e => setTeam2Name(e.target.value)}></input>
             <br />
             <button className='btn btn-outline-warning first-btn' onClick={() => deleteTeam2()}>Armar de nuevo</button>
             <button type='submit' className='btn btn-outline-warning mt-4 mb-4'>

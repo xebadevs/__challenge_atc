@@ -38,10 +38,10 @@ return (
                 <img src={photo? photo : noPhoto} alt="" />
             ))}
         </div>
-        <form className='team1-confirm mt-5' onSubmit={createName1}>
+        <form className='five-ready mt-5' onSubmit={createName1}>
             <label className='mt-4'>¿Cómo quieras llamar a tu equipo?</label>
             <br />
-            <input type="text" maxLength="25" required onChange={e => setTeam1Name(e.target.value)}></input>
+            <input className='text-center' type="text" maxLength="25" required onChange={e => setTeam1Name(e.target.value)}></input>
             <br />
             <button className='btn btn-outline-warning first-btn' onClick={() => deleteTeam1()}>Armar de nuevo</button>
             <button type='submit' className='btn btn-outline-warning mt-4 mb-4'>

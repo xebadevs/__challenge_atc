@@ -59,8 +59,9 @@ to {
 }
 
 .five-ready {
-    background-color: var(--dark-green);
+    background-color: var(--dark-green-hover);
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: var(--shadow-medium);
 }

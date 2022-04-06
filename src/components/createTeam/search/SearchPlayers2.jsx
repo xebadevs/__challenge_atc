@@ -39,6 +39,7 @@ function SearchPlayers () {
                 }else{
                     setRenderInfo(false)
                     setNoResponse(true)
+                    setTimeout(hideNoResponse, 3000)
                 }
             })
             .catch(err => {
