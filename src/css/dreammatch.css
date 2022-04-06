@@ -1,0 +1,52 @@
+.darky-nav {
+    width: 738px;
+}
+
+.main-field-container {
+    display: flex;
+    justify-content: center;
+}
+
+.field {
+    display: grid;
+    background: url(../assets/img/field_vertical.png);
+    background-repeat: no-repeat;
+    height: 1098px;
+    width: 738px;
+    /* position: absolute; */
+    margin: auto;
+}
+
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 90;
+}
+
+.circle1 {
+    display: flex;
+    top: 5%;
+    left: 47%;
+}
+
+.circle2 {
+    display: flex;
+    top: -65%;
+    left: 25%;
+}
+
+
+
+
+
+
+
+/* MEDIAQUERIES */
+@media screen and (max-width: 810px) and (orientation: portrait){
+    .field {
+        width: 738px;
+    }
+  }

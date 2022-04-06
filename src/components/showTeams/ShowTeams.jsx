@@ -14,6 +14,16 @@ function ShowTeams() {
     const team2PhotosJSON = JSON.parse(team2Photos)
     const navigate = useNavigate()
 
+    const restart = () => {
+        localStorage.removeItem('Team1Name')
+        localStorage.removeItem('Team1')
+        localStorage.removeItem('Team1Photos')
+        localStorage.removeItem('Team2Name')
+        localStorage.removeItem('Team2')
+        localStorage.removeItem('Team2Photos')
+        navigate('/')
+    }
+
     return (
         <>
             <Navbar />
@@ -37,7 +47,7 @@ function ShowTeams() {
             </div>
             <h3 className='text-center mt-4'> {team2Name} </h3>
             <div className="dm-confirm-btn">
-                <button className='btn-success mt-5 mb-5' onClick={() => navigate('/dream-match')}>¡A jugar!</button>
+                <button className='btn-success mt-5 mb-5' onClick={() => restart()}>¡Volver a empezar!</button>
             </div>
             <Footer />
         </>

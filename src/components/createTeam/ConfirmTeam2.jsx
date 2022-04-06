@@ -51,7 +51,7 @@ return (
             <button className='btn btn-outline-warning first-btn' onClick={() => deleteTeam2()}>Armar de nuevo</button>
             <button type='submit' className='btn btn-outline-warning mt-4 mb-4'>
                 <img src={balloon} alt="ícono pelota" className='balloon-ico mx-2' />
-                Continuar
+                ¡Ver Partido!
                 <img src={balloon} alt="ícono pelota" className='balloon-ico mx-2' />
             </button>
         </form>

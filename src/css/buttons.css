@@ -32,5 +32,8 @@
 /* -------------------- DREAM-MATCH PAGE BUTTONS --------------------  */
   .dm-confirm-btn {
     display: grid;
-    justify-content: center;
+  }
+
+  .dm-confirm-btn button {
+    width: 300px;
   }
