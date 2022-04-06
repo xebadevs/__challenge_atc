@@ -15,6 +15,10 @@
     background-color: var(--dark-green-hover);
 }
 
+.last-game {
+  width: 250px;
+}
+
 /* -------------------- SEARCH PAGE BUTTONS --------------------  */
   .btn-warning {
     padding: 0px;

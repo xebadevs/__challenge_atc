@@ -22,7 +22,7 @@ function ConfirmTeam2() {
       }else{
         dispatch(turnToZero())
         localStorage.setItem('Team2Name', JSON.stringify(team2Name))
-        navigate('/mis-equipos')
+        navigate('/dream-match')
       }
   }
 
@@ -37,7 +37,7 @@ function ConfirmTeam2() {
 return (
     <div>
         <Navbar />  
-        <h3 className='text-center mt-5'>Renderizar jugadores:</h3>
+        <h3 className='text-center mt-5'>Equipo 2</h3>
         <div className="confirm-container mt-4">
             {team2PhotosJSON.map((photo) => (
                 <img src={photo? photo : noPhoto} alt="" />

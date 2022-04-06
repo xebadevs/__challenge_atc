@@ -5,6 +5,8 @@ import player from '../../assets/img/soccer_player.png'
 
 function Home() {
   const navigate = useNavigate()
+  const team2 = localStorage.getItem('Team2')
+  console.log(team2)
 
   return (
     <div className='home-container'>
@@ -22,6 +24,11 @@ function Home() {
           <img src={player} alt='soccer player'></img>
         </div>
         <button className='btn-success mt-3 mb-5' onClick={() => navigate('/equipo1')}>¡A jugar!</button>
+
+        {team2 !== null &&
+            <button className='btn-success mt-3 mb-5 last-game' onClick={() => navigate('/dream-match')}>Ver mi último partido</button>
+        }
+
         <Footer />
     </div>
   )
