@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Dream-Match App ⚽
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación Web para dejar volar la imaginación hacia un partido soñado.
 
-## Available Scripts
+Challenge basado en `React JS`.
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## Deploy en Netlify
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> https://dream-match.netlify.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Cómo visualizar el proyecto
 
-### `npm run build`
+A través de un servidor externo, en este caso `Netlify`, se ha de acceder a la `URL` provista.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para correrlo localmente, han de realizarse los siguientes pasos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Descargar el proyecto o clonarlo desde consola con el comando: `git clone https://github.com/xebadevs/challenge_atc.git`
+2. Ejecutar `npm i` para su instalación
+3. Ejecutar `npm run start`, luego de lo cual se abrirá en el navegador predeterminado en `http://localhost:3000/`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Como extra, se puede ejecutar `npm run build` para corroborar que el proyecto compila satisfactoriamente y sin errores.
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contexto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+En el curso de una aceleración para NoCountry, formando parte de un equipo de trabajo con el cual realizamos un proyecto web en `React JS` y `PHP`, y habiendo adelantado lo más posible en el mismo para no superponer ambos proyectos, hube de disponerme por completo a la realización de este challenge.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Organicé la idea general, considerando una interfaz agradable y de uso sencillo para cualquier usuario, predecible y lineal, con lineamientos claros acerca de cada paso dentro del proceso.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Comprobé, asimismo, que dicho desarrollo contemplara todos y cada uno de los puntos requeridos en el challenge, a excepción de la implementación de Docker que, por falta de tiempo -y por no haberlo utilizado en ocasión alguna- no he conseguido de momento hacerlo funcionar allí.
+A modo de compensación, su deploy fue realizado en Netlify.
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Aspectos técnicos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Habiendo podido brindarle un tiempo considerablemente menor debido a otras obligaciones, no pude finiquitar como hubiera querido una serie de detalles, a saber:
+- Implementación de funcionalidades más abstractas, a fin de no reiterar código. Es el punto sobre el que me muestro más crítico.
+- Mejor gestión de las variables globales, en donde opté por el uso de LocalStorage para conservar los equipos que pudiera crear el usuario.
+- Transiciones más logradas para mejorar la experiencia de usuario.
+- Una revisión de la paleta de colores.
 
-### Code Splitting
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Funcionalidades que hubiera implementado de contar con más tiempo: cambios de jugadores en singular; opción para hacer una captura del partido final; opción para compartir el partido final; test unitarios; renderizar a los jugadores en un terreno de juego; comprobar un mejor funcionamiento en modo oscuro.
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Por lo demás, son aspectos varios que me guardo y a partir de los cuales continuaré aprendiendo para que mis abordajes próximos no adolezcan de las mismas falencias, y en donde se robustezcan los aspectos positivos.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Sebastián Londero
