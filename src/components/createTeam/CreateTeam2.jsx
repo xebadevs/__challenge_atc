@@ -8,7 +8,6 @@ function CreateTeam() {
 
     return (
         <>
-            <h1>CreateTeam Component</h1>
             <Navbar />
             <TopMessage num={teamNumber} />
             <SearchPlayers2 />

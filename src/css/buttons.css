@@ -28,3 +28,9 @@
   .card button {
       border-radius: 30px;
   }
+
+/* -------------------- DREAM-MATCH PAGE BUTTONS --------------------  */
+  .dm-confirm-btn {
+    display: grid;
+    justify-content: center;
+  }

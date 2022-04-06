@@ -37,7 +37,8 @@
   min-height: 33vh;
 }
 
-.confirm-container {
+.confirm-container,
+.confirm-container-both {
     display: flex;
     width: 1000px;
     margin: auto;
@@ -46,10 +47,19 @@
     padding: 10px;
 }
 
-.confirm-container img {
+.confirm-container img,
+.confirm-container-both img {
     margin: auto;
     border: 3px solid gray;
     border-radius: 50%;
+}
+
+.confirm-container-both {
+    width: 850px;
+}
+
+.confirm-container-both img {
+    width: 120px;
 }
 
   /* -------------------- MEDIAQUERIES --------------------  */

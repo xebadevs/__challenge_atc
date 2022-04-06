@@ -38,6 +38,10 @@ body {
   margin-top: 1px;
 }
 
+.mini-field {
+  display: grid;
+  justify-content: center;
+}
 
 /* MEDIAQUERIES */
 @media screen and (max-width: 810px) and (orientation: portrait){
