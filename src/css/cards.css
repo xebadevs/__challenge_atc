@@ -37,9 +37,38 @@
   min-height: 33vh;
 }
 
+.confirm-container {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    background-color: var(--dark-green);
+    border-radius: 30px;
+    padding: 10px;
+}
 
+.confirm-container img {
+    margin: auto;
+    border: 3px solid gray;
+    border-radius: 50%;
+}
 
   /* -------------------- MEDIAQUERIES --------------------  */
-@media screen and (max-width: 810px) and (orientation: portrait){
-    /*  */
+@media screen and (max-width: 820px) and (orientation: portrait){
+    .confirm-container {
+        width: 370px;
+    }
+
+    .confirm-container img {
+        width: 65px;
+    }
+}
+
+@media screen and (max-width: 360px) and (orientation: portrait){
+    .confirm-container {
+        width: 355px;
+    }
+
+    .confirm-container img {
+        width: 55px;
+    }
 }

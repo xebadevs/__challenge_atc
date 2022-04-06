@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { turnToZero } from '../../features/playerCounter/PlayerCounterSlice'
 import noPhoto from '../../assets/img/nn_photo.png'
+import balloon from '../../assets/img/ico_ball.png'
+import Navbar from '../navbar/Navbar'
 
 function ConfirmTeam1() {
     const [team1Name, setTeam1Name] = useState(null)
@@ -29,20 +31,24 @@ function ConfirmTeam1() {
     
 return (
     <div>
-        <h1>ConfirmTeam1 Component</h1>
-        <div>
-            <h3>Renderizar jugadores:</h3>
-            {team1PhotosJSON.map((photo) => (
-                <img src={photo? photo : noPhoto} alt="" />
-            ))}
+        <Navbar />
+            <h3 className='text-center mt-5'>Equipo 1</h3>
+            <div className='confirm-container mt-4'>
+                {team1PhotosJSON.map((photo) => (
+                    <img src={photo? photo : noPhoto} alt="" />
+                ))}
         </div>
-        <form onSubmit={createName1}>
-            <label>¿Cómo quieras llamar a tu equipo?</label>
+        <form className='team1-confirm mt-5' onSubmit={createName1}>
+            <label className='mt-4'>¿Cómo quieras llamar a tu equipo?</label>
             <br />
-            <input type="text" required onChange={e => setTeam1Name(e.target.value)}></input>
+            <input type="text" maxLength="25" required onChange={e => setTeam1Name(e.target.value)}></input>
             <br />
-            <button onClick={() => deleteTeam1()}>Armar de nuevo</button>
-            <button type='submit'>Continuar</button>
+                <button className='btn btn-outline-warning first-btn' onClick={() => deleteTeam1()}>Armar de nuevo</button>
+                <button type='submit' className='btn btn-outline-warning mt-4 mb-4'>
+                    <img src={balloon} alt="ícono pelota" className='balloon-ico mx-2' />
+                        Continuar
+                    <img src={balloon} alt="ícono pelota" className='balloon-ico mx-2' />
+                </button>
         </form>
     </div>
     )

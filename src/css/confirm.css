@@ -1,0 +1,23 @@
+.team1-confirm {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--dark-green);
+  }
+
+  .team1-confirm input {
+      border-radius: 10px;
+      border: none;
+      height: 40px;
+      text-align: center;
+  }
+  
+  .team1-confirm-btn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .first-btn {
+    margin: auto;
+    width: 200px;
+  }

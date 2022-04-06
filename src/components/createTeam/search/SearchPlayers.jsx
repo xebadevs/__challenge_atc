@@ -55,7 +55,7 @@ function SearchPlayers () {
                 setTeam1([...team1, id])
                 setPlayerPhotos([...playerPhotos, img])
                 setDisplayCounter(true)
-                setTimeout(hideDisplayCounter, 30000)
+                setTimeout(hideDisplayCounter, 3000)
             }
         }
 
@@ -83,6 +83,10 @@ function SearchPlayers () {
         setDisplayCounter(false)
     }
 
+    const refreshSite = () => {
+        window.location.reload()
+    }
+
 return (
     <>
         <div className='search-control mt-4 mb-4'>
@@ -106,11 +110,16 @@ return (
             <p className='text-center'>¡Nadie con ese nombre por aquí!</p>
         }
 
-        {count === 5 &&
+        {count >= 5 &&
             <div className='five-ready mt-5'>
-                <h3>¡Ya tienes a</h3>
+                <h3 className='mt-4'>¡Ya tienes a</h3>
                 <h3>tus 5 jugadores!</h3>
-                <button className='mt-3' onClick={() => continuar()}>Continuar</button>
+                <button className='btn btn-outline-warning mt-3' onClick={() => refreshSite()}>Volver</button>
+                <button className='btn btn-outline-warning mt-3 mb-4' onClick={() => continuar()}>
+                    <img src={balloon} alt="ícono pelota" className='balloon-ico mx-2' />
+                    ¡Continuar!
+                    <img src={balloon} alt="ícono pelota" className='balloon-ico mx-2' />
+                </button>
             </div>
         }
 
@@ -126,7 +135,7 @@ return (
                         <p className='card-title mt-2 text-center'>{e.player_name.toUpperCase()}</p>
                         <p className='text-center'>{e.team_name}</p>
                         <p hidden>{e.player_id}</p>
-                        <button className='btn-warning rounded' onClick={() => countAndSet(e.player_id, e.player_image)}>Seleccionar</button>
+                        <button className='btn btn-outline-warning rounded' onClick={() => countAndSet(e.player_id, e.player_image)}>Seleccionar</button>
                         <hr />
                     </div>
                 ))}
