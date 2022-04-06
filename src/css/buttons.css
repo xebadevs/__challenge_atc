@@ -7,7 +7,6 @@
     margin: auto;
     border: transparent;
     transition: all .8s ease-in-out;
-
 }
 
 .btn-success:focus,
@@ -17,11 +16,6 @@
 }
 
 /* -------------------- SEARCH PAGE BUTTONS --------------------  */
-.button.btn.btn-warning.btn-balloon {
-    margin: 0;
-    padding: 0px;
-  }
-  
   .btn-warning {
     padding: 0px;
     width: 50px;
@@ -29,4 +23,8 @@
   
   .balloon-ico {
     width: 35px;
+  }
+
+  .card button {
+      border-radius: 30px;
   }

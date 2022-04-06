@@ -1,0 +1,70 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+}
+
+.card {
+    width: 250px;
+    margin: auto;
+    background: url(../assets/img/card_bcg.svg);
+    border: 1px solid whitesmoke;
+    transition: all .4s ease-in-out;
+}
+
+.card:hover,
+.card:focus {
+    background: url(../assets/img/card_bcg_hover.svg);
+}
+
+.card img {
+    width: 150px;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid grey;
+}
+
+.card button {
+    width: 150px;
+    margin: auto;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.footer-helper {
+  min-height: 33vh;
+}
+
+.alert {
+    background-color: rgb(110, 8, 8);
+    color: whitesmoke;
+    width: 50vw;
+    height: 70px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    z-index: 99;
+
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+from {
+    margin-left: 0%;
+    width: 30%
+}
+
+to {
+    margin-left: 30%;
+    width: -100%;
+}
+}
+
+  /* -------------------- MEDIAQUERIES --------------------  */
+@media screen and (max-width: 810px) and (orientation: portrait){
+    /*  */
+}

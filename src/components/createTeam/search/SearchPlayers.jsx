@@ -12,6 +12,8 @@ function SearchPlayers () {
     const [inputValue, setInputValue] = useState([])
     const [renderInfo, setRenderInfo] = useState(false)
     const [noResponse, setNoResponse] = useState(false)
+    const [repeatedPlayer, setRepeatedPlayer] = useState(false)
+    const [displayCounter, setDisplayCounter] = useState(false)
     const [team1, setTeam1] = useState([])
     const [playerPhotos, setPlayerPhotos] = useState([])
     const navigate = useNavigate()
@@ -35,6 +37,7 @@ function SearchPlayers () {
                 }else{
                     setRenderInfo(false)
                     setNoResponse(true)
+                    setTimeout(hideNoResponse, 3000)
                 }
             })
             .catch(err => {
@@ -44,13 +47,19 @@ function SearchPlayers () {
     
     const countAndSet = (id, img) => {
         if(team1.includes(id)){
-            alert('REPETIDO')
+            setRepeatedPlayer(true)
+            setTimeout(hideRepeatedPlayerAlert, 3000)
         }else{
             if(count < 6){
-            dispatch(increment(id))
-            setTeam1([...team1, id])
-            setPlayerPhotos([...playerPhotos, img])
+                dispatch(increment(id))
+                setTeam1([...team1, id])
+                setPlayerPhotos([...playerPhotos, img])
+                setDisplayCounter(true)
             }
+        }
+
+        if(count === 4){
+            setRenderInfo(false)
         }
     }
         
@@ -60,9 +69,17 @@ function SearchPlayers () {
         navigate('/confirmar-equipo1')
     }
 
+    const hideRepeatedPlayerAlert = () => {
+        setRepeatedPlayer(false)
+    }
+
+    const hideNoResponse = () => {
+        setNoResponse(false)
+    }
+
 return (
     <>
-        <div className='search-control mt-4'>
+        <div className='search-control mt-4 mb-4'>
             <input className="form-control" type="search" placeholder="Buscar jugador..." aria-label="Search" onChange={e => setInputValue(e.target.value)} />
             {inputValue !== [] &&
                 <button className="btn btn-warning btn-ballon" disabled={false} onClick={() => getInfo(inputValue)}>
@@ -71,32 +88,48 @@ return (
             }
         </div>
 
-        {renderInfo &&
+        {repeatedPlayer &&
             <div>
-                {info.map((e) => (
-                    <div key={e.player_id}>
-                        <img src={e.player_image? e.player_image : noPhoto} alt={e.player_name}></img>
-                        <p>{e.player_name.toUpperCase()}</p>
-                        <p>{e.team_name}</p>
-                        <p>{e.player_id}</p>
-                        <p hidden>{e.player_type}</p>
-                        <button onClick={() => countAndSet(e.player_id, e.player_image)}>Seleccionar</button>
-                        <hr />
-                    </div>
-                ))}
-                <p>{count}</p>
-                <p>{team1 + ' '}</p>
+                <div class="alert alert-light" role="alert">
+                     ¡Repetido!
+                </div>
             </div>
         }
 
         {noResponse &&
-            <p>¡Nadie con ese nombre por aquí!</p>
+            <p className='text-center'>¡Nadie con ese nombre por aquí!</p>
         }
 
         {count === 5 &&
+            <div className='confirm-note mt-5'>
+                <h3>¡Ya tienes a</h3>
+                <h3>tus 5 jugadores!</h3>
+                <button className='mt-3' onClick={() => continuar()}>Continuar</button>
+            </div>
+        }
+
+        {!renderInfo &&
+        <div className='footer-helper'></div>
+        }
+
+        {renderInfo &&
+            <div className='card-container'>
+                {info.map((e) => (
+                    <div className='card mt-5' key={e.player_id}>
+                        <img className='card-img-top mt-3' src={e.player_image? e.player_image : noPhoto} alt={e.player_name}></img>
+                        <p className='card-title mt-2 text-center'>{e.player_name.toUpperCase()}</p>
+                        <p className='text-center'>{e.team_name}</p>
+                        <p hidden>{e.player_id}</p>
+                        <button className='btn-warning rounded' onClick={() => countAndSet(e.player_id, e.player_image)}>Seleccionar</button>
+                        <hr />
+                    </div>
+                ))}
+            </div>
+        }
+
+        {displayCounter &&
             <div>
-                <h1>ESTÁN LOS CINCOOOOOOOOOOOOOOOO</h1>
-                <button onClick={() => continuar()}>Continuar</button>
+                <h1>{count}</h1>
             </div>
         }
     </>
