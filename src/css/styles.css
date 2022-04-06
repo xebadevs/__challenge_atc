@@ -13,7 +13,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--bg-main);
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(12,151,80,1) 50%, rgba(0,0,0,1) 100%);;
   background: linear-gradient(90deg, rgba(0,38,15,1) 0%, rgba(12,151,80,1) 50%, rgba(0,38,15,1) 100%);
   color: whitesmoke;
   font-family: 'Montserrat', sans-serif;
@@ -49,8 +48,16 @@ body {
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,23,7,1) 50%, rgba(0,0,0,1) 100%);
 }
 
-/* MEDIAQUERIES */
-@media screen and (max-width: 810px) and (orientation: portrait){
+.footer-helper {
+  min-height: 33vh;
+}
+
+.footer-helper-min {
+  min-height: 20vh;
+}
+
+/* -------------------- MEDIAQUERIES --------------------  */
+@media screen and (max-width: 912px) and (orientation: portrait){
   .top-message h3 {
       font-size: 18px;
       font-weight: bold;
@@ -58,5 +65,9 @@ body {
 
   .top-message h5 {
     font-size: 14px;
+  }
+
+  .footer-helper {
+    min-height: 60vh;
   }
 }

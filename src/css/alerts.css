@@ -1,3 +1,4 @@
+/* -------------------- SELECT PLAYER ALERTS --------------------  */
 .alert {
     background-color: rgb(110, 8, 8);
     color: whitesmoke;
@@ -56,12 +57,4 @@ to {
         margin-left: 30%;
         width: 10%;
         }
-}
-
-.five-ready {
-    background-color: var(--dark-green-hover);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: var(--shadow-medium);
 }

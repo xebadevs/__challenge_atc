@@ -28,7 +28,12 @@
     font-family: 'Kalam', cursive;
   }
 
-  /* MEDIAQUERIES */
+/* -------------------- MEDIAQUERIES --------------------  */
+@media screen and (max-width: 1024px) and (orientation: landscape){
+  .navbar-container {
+    height: 10vh;
+  }  
+}
 @media screen and (max-width: 810px) and (orientation: portrait){
   .navbar-container {
     padding: 0px;

@@ -21,3 +21,11 @@
     margin: auto;
     width: 200px;
   }
+
+  .five-ready {
+    background-color: var(--dark-green-hover);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow-medium);
+}

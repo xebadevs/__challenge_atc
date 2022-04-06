@@ -13,6 +13,7 @@ function ConfirmTeam2() {
   const team2Photos = localStorage.getItem('Team2Photos')
   const team2PhotosJSON = JSON.parse(team2Photos)
 
+    // * Se vuelve el contador a cero; se almacenan datos del Equipo 1, se redirecciona para ver el Partido
   const createName2 = (e) => {
       e.preventDefault()
       e.nativeEvent.stopImmediatePropagation()
@@ -26,6 +27,7 @@ function ConfirmTeam2() {
       }
   }
 
+    // * Se limpian los datos del Equipo 2
     const deleteTeam2 = () => {
         localStorage.removeItem('Team2')
         localStorage.removeItem('Team2Name')
@@ -34,6 +36,7 @@ function ConfirmTeam2() {
         navigate('/equipo2')
     }
 
+// * Se muestran los jugadores, se requiere nombrar al equipo y se da opción de rearmar el Equipo o continuar
 return (
     <div>
         <Navbar />  

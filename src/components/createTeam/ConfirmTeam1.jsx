@@ -5,6 +5,7 @@ import { turnToZero } from '../../features/playerCounter/PlayerCounterSlice'
 import noPhoto from '../../assets/img/nn_photo.png'
 import balloon from '../../assets/img/ico_ball.png'
 import Navbar from '../navbar/Navbar'
+import Footer from '../footer/Footer'
 
 function ConfirmTeam1() {
     const [team1Name, setTeam1Name] = useState(null)
@@ -13,6 +14,7 @@ function ConfirmTeam1() {
     const team1Photos = localStorage.getItem('Team1Photos')
     const team1PhotosJSON = JSON.parse(team1Photos)
 
+    // * Se vuelve el contador a cero; se almacenan datos del Equipo 1, se redirecciona para crear Equipo 2
     const createName1 = (e) => {
         e.preventDefault()
         e.nativeEvent.stopImmediatePropagation()
@@ -21,6 +23,7 @@ function ConfirmTeam1() {
         navigate('/equipo2')
     }
 
+    // * Se limpian los datos del Equipo 1
     const deleteTeam1 = () => {
         localStorage.removeItem('Team1')
         localStorage.removeItem('Team1Name')
@@ -29,6 +32,7 @@ function ConfirmTeam1() {
         navigate('/equipo1')
     }
     
+// * Se muestran los jugadores, se requiere nombrar al equipo y se da opción de rearmar el Equipo o continuar
 return (
     <div>
         <Navbar />
@@ -50,6 +54,8 @@ return (
                 <img src={balloon} alt="ícono pelota" className='balloon-ico mx-2' />
             </button>
         </form>
+            <div className="footer-helper-min"></div>
+        <Footer />
     </div>
     )
 }

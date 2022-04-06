@@ -1,5 +1,3 @@
-
-
 function TopMessage({num}) {
   return (
     <div className="top-message mt-3">

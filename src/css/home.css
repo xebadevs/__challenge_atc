@@ -20,7 +20,7 @@ width: 50vh;
 margin: auto;
 }
 
-/* MEDIAQUERIES */
+/* -------------------- MEDIAQUERIES --------------------  */
 @media screen and (max-width: 810px) and (orientation: portrait){
 .main-title {
     font-size: 18px;

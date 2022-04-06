@@ -34,10 +34,6 @@
     font-weight: bold;
 }
 
-.footer-helper {
-  min-height: 33vh;
-}
-
 .confirm-container,
 .confirm-container-both {
     display: flex;
@@ -67,11 +63,13 @@
 
   /* -------------------- MEDIAQUERIES --------------------  */
 @media screen and (max-width: 820px) and (orientation: portrait){
-    .confirm-container {
+    .confirm-container,
+    .confirm-container-both {
         width: 370px;
     }
 
-    .confirm-container img {
+    .confirm-container img,
+    .confirm-container-both img {
         width: 65px;
     }
 }

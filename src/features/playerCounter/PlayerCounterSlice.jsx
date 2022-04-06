@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// * Contador para registrar cantidad de jugadores seleccionados
+// * Reseteo de contador para rearmar cada equipo
 export const PlayerCounterSlice = createSlice({
     name: 'counter',
     initialState: {

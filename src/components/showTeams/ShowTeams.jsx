@@ -5,6 +5,7 @@ import team2field from '../../assets/img/field_mini_b.png'
 import Footer from "../footer/Footer"
 import { useNavigate } from 'react-router-dom'
 
+// * Se obtienen los equipos para luego ser mostrados
 function ShowTeams() {
     const team1Name = localStorage.getItem('Team1Name')
     const team1Photos = localStorage.getItem('Team1Photos')
@@ -14,6 +15,7 @@ function ShowTeams() {
     const team2PhotosJSON = JSON.parse(team2Photos)
     const navigate = useNavigate()
 
+    // * Se eliminan los datos de ambos equipos
     const restart = () => {
         localStorage.removeItem('Team1Name')
         localStorage.removeItem('Team1')
@@ -24,6 +26,7 @@ function ShowTeams() {
         navigate('/')
     }
 
+    // * Se muestran ambos equipos con su disposición en la cancha y jugadores
     return (
         <>
             <div className="black-bcg">

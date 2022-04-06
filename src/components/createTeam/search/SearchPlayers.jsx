@@ -18,10 +18,11 @@ function SearchPlayers () {
     const [playerPhotos, setPlayerPhotos] = useState([])
     const navigate = useNavigate()
 
-
+    // * Contador en Redux para no superar 5 jugadores por Equipo
     const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
 
+    // * Llamado a API con control de errores y habilitación de distintos renderizados
     const getInfo = async (param) => {
         let options = {
             method: 'GET',
@@ -45,6 +46,7 @@ function SearchPlayers () {
             })
     }
     
+    // * Se cuenta y almacenan los jugadores seleccionados. Se notifica si se repiten
     const countAndSet = (id, img) => {
         if(team1.includes(id)){
             setRepeatedPlayer(true)
@@ -65,24 +67,29 @@ function SearchPlayers () {
         }
     }
         
+    // * Almacenamiento de los jugadores seleccionados y redirección
     const continuar = () => {
         localStorage.setItem('Team1', JSON.stringify(team1))
         localStorage.setItem('Team1Photos', JSON.stringify(playerPhotos))
         navigate('/confirmar-equipo1')
     }
 
+    // * Se oculta la notificación de jugador repetido
     const hideRepeatedPlayerAlert = () => {
         setRepeatedPlayer(false)
     }
 
+    // * Se oculta la notificación cuando no se encuentra un jugador por el nombre
     const hideNoResponse = () => {
         setNoResponse(false)
     }
 
+    // * Se oculta el contador de jugadores
     const hideDisplayCounter = () => {
         setDisplayCounter(false)
     }
 
+    // * Se refresca el sitio en caso que se quiera comenzar de nuevo sin guardar los jugadores seleccionados
     const refreshSite = () => {
         window.location.reload()
     }
@@ -98,6 +105,7 @@ return (
             }
         </div>
 
+        // * Jugador repetido
         {repeatedPlayer &&
             <div>
                 <div class="alert alert-light" role="alert">
@@ -106,10 +114,12 @@ return (
             </div>
         }
 
+        // * Búsqueda sin respuesta
         {noResponse &&
             <p className='text-center'>¡Nadie con ese nombre por aquí!</p>
         }
 
+        // * Si ya hay 5 jugadores, se da la opción de limpiar todo o continuar
         {count >= 5 &&
             <div className='five-ready mt-5'>
                 <h3 className='mt-4'>¡Ya tienes a</h3>
@@ -123,10 +133,12 @@ return (
             </div>
         }
 
+        // * Helper para que el footer no quede a mitad de la vista
         {!renderInfo &&
         <div className='footer-helper'></div>
         }
 
+        // * Se muestran todos los resultados
         {renderInfo &&
             <div className='card-container'>
                 {info.map((e) => (
@@ -142,6 +154,7 @@ return (
             </div>
         }
 
+        // * Contador de jugadores
         {displayCounter &&
             <div className='count-alert'>
                 <h3>{count}</h3>
